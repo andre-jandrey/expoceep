@@ -6,7 +6,7 @@
 Enviar projeto
 </a></h1>
 <table class='table table-striped table-bordered table-hover'>
-    <tr><th>Nome</th><th>Curso</th><th>Sala</th><th>Box</th><th>Turma</th><th>Integrantes</th><th>Orientadores</th><th>Envio</th><th colspan='3'>Ações</th>
+    <tr><th>Nome</th><th>Curso</th><th>Sala</th><th>Box</th><th>Turma</th><th>Integrantes</th><th>Orientadores</th><th>Arquivo</th><th colspan='4'>Ações</th>
         @foreach ($projeto as $d)
             <tr>
            <!--  <td>{{$d->id}}</td> -->
@@ -18,8 +18,8 @@ Enviar projeto
             <td>{{$d->integrantes}}</td>
             <td>{{$d->orientadores}}</td>
            <!--  <td>{{$d->email}}</td> -->
-           <!--  <td>{{$d->arquivo}}</td> -->
-            <td>{{$d->data_hora}}</td>
+            <td><a class="btn btn-outline-primary" href="/storage/{{$d->arquivo}}">Download</a></td>
+            <!-- <td>{{$d->data_hora}}</td> -->
            <!--  <td>{{$d->created_at}}</td>
             <td>{{$d->updated_at}}</td> -->
       <!--   <td>

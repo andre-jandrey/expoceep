@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Curso;
 use App\Http\Requests\ProjetoRequest;
+/* use Illuminate\Http\File;*/
 use App\Projeto;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,9 +29,19 @@ class ProjetoController extends Controller
 
     public function update(ProjetoRequest $request, $id)
     {
+        $request->validate([
+            'arquivo' => 'max:5120', //5MB
+        ]);
+
+        $path = $request->arquivo->store('arquivos');
+        //$url = Storage::url($path);
+        $dados = $request->all();
+
         $projeto = projeto::find($id);
-        $projeto->update($request->all());
-        // return response()->json($projeto);
+        $dados["usuario_id"] = Auth::user()->id;
+        $dados["arquivo"] = $path;
+        $projeto->update($dados);
+
         return redirect()->action('ProjetoController@index')->withInput($request->only('nome'));
     }
 
@@ -65,9 +76,17 @@ class ProjetoController extends Controller
 
     public function store(ProjetoRequest $request)
     {
+        $request->validate([
+            'arquivo' => 'max:5120', //5MB
+        ]);
+
+        $path = $request->arquivo->store('arquivos');
+        //$url = Storage::url($path);
         $dados = $request->all();
 
         $dados["usuario_id"] = Auth::user()->id;
+        $dados["arquivo"] = $path;
+
         $projeto = projeto::create($dados);
 
         // Store a piece of data in the session...

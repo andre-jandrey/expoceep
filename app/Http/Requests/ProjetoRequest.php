@@ -30,8 +30,7 @@ class ProjetoRequest extends FormRequest
             'integrantes' => 'required|min:3|max:255',
             'orientadores' => 'required|min:3|max:255',
             'email' => 'required|email|min:3|max:255',
-            'arquivo' => 'required',
+            'arquivo' => "required|mimes:pdf|max:10000",
         ];
     }
 }
-?>
