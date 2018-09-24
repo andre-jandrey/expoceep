@@ -26,3 +26,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mapa/bloco', 'MapaController@showBloco')->name('bloco');
     Route::get('/mapa/bloco/{id}', 'MapaController@showBlocoCurso')->name('bloco');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', 'AdminController@index'); // editar registro
+    Route::get('/relatorioBox', 'AdminController@relProjetoBox'); // editar registro
+    Route::get('/etiquetas', 'AdminController@relEtiquetas'); // editar registro
+});

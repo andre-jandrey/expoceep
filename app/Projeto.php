@@ -8,17 +8,18 @@ class Projeto extends Model
 {
     protected $table = "projeto";
 
-    protected $fillable = [ 'nome',
-                            'curso_id',
-                            'usuario_id',
-                            'box',
-                            'turma',
-                            'integrantes',
-                            'orientadores',
-                            'email',
-                            'arquivo'];
+    protected $fillable = ['nome',
+        'curso_id',
+        'usuario_id',
+        'box',
+        'turma',
+        'integrantes',
+        'orientadores',
+        'email',
+        'arquivo'];
 
-    public static function rules() {
+    public static function rules()
+    {
         return [
             'curso_id' => 'required|integer',
             'usuario_id' => 'required|integer',
@@ -31,7 +32,8 @@ class Projeto extends Model
         ];
     }
 
-    public static function rulesUpdate() {
+    public static function rulesUpdate()
+    {
         return [
             'curso_id' => 'required|integer',
             'usuario_id' => 'required|integer',
@@ -51,6 +53,7 @@ class Projeto extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User', 'usuario_id');
+        //return $this->belongsTo(User::class);
     }
 }
