@@ -29,6 +29,6 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin', 'AdminController@index'); // editar registro
-    Route::get('/relatorioBox', 'AdminController@relProjetoBox'); // editar registro
+    //Route::get('/relatorioBox', 'AdminController@relProjetoBox'); // editar registro
     Route::get('/etiquetas', 'AdminController@relEtiquetas'); // editar registro
 });
