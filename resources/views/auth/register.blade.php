@@ -60,6 +60,26 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_pesquisa_escolar.doc'>Modelo de projeto de pesquisa escolar</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_iniciacao_cientifica.doc'>Modelo de projeto de iniciação científica</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_banner_novo.ppt'>Modelo de banner</a><br>
+
+                            </div>
+                        </div>
+                       <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="confirm" id="confirm" {{ old('confirm') ? 'checked' : '' }} required>
+
+                                    <label class="form-check-label" for="confirm">
+                                        {{ __('Aceito os termos da expoceep') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

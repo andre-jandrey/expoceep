@@ -1,6 +1,10 @@
 
 @extends('layouts.app')
 @section('content')
+<a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_pesquisa_escolar.doc'>Modelo de projeto de pesquisa escolar</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_iniciacao_cientifica.doc'>Modelo de projeto de iniciação científica</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_banner_novo.ppt'>Modelo de banner</a><br>
     <h1>Meus projetos
 <a class='btn btn-primary' href='{{action("ProjetoController@create")}}'>
 Enviar projeto
