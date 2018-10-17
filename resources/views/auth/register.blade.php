@@ -62,6 +62,8 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/RegulamentoEXPOCEEP2018.pdf'>Regulamento da ExpoCEEP 2018</a><br>
+                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/autorizacao_de_imagem.doc'>Termo de autorização de uso de imagem</a><br>
                                 <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_pesquisa_escolar.doc'>Modelo de projeto de pesquisa escolar</a><br>
                                 <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_iniciacao_cientifica.doc'>Modelo de projeto de iniciação científica</a><br>
                                 <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
@@ -75,7 +77,7 @@
                                     <input class="form-check-input" type="checkbox" name="confirm" id="confirm" {{ old('confirm') ? 'checked' : '' }} required>
 
                                     <label class="form-check-label" for="confirm">
-                                        {{ __('Aceito os termos da expoceep') }}
+                                        {{ __('Li e aceito os termos do regulamento da expoceep, assim como o termo de autorização de uso de imagem') }}
                                     </label>
                                 </div>
                             </div>

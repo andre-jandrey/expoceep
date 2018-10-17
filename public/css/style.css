@@ -1,0 +1,24 @@
+body{
+	background-color: rgba(126,208,180,0.4);
+	background-image: url(../img/sadboy.png);
+	background-size: 300px 300px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+h1{
+    font-family: 'Uncial Antiqua', cursive;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 80px;
+}
+h2{
+	font-size: 55px;
+    font-family: 'Uncial Antiqua', cursive;
+    font-family: 'Ropa Sans', sans-serif;
+}
+p{
+	font-size: 30px;
+	font-family: 'Uncial Antiqua', cursive;
+    font-family: 'Ropa Sans', sans-serif;
+    z-index: 5;
+}

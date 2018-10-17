@@ -6,14 +6,19 @@
                                 <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
                                 <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_banner_novo.ppt'>Modelo de banner</a><br>
     <h1>Meus projetos
-<a class='btn btn-primary' href='{{action("ProjetoController@create")}}'>
-Enviar projeto
-</a></h1>
+
+    @if(count($projeto)==0)
+        <a class='btn btn-primary' href='{{action("ProjetoController@create")}}'>
+            Enviar projeto
+            </a>
+    @endif
+</h1>
 <table class='table table-striped table-bordered table-hover'>
-    <tr><th>Nome</th><th>Curso</th><th>Sala</th><th>Box</th><th>Turma</th><th>Integrantes</th><th>Orientadores</th><th>Arquivo</th><th colspan='4'>Ações</th>
+    <tr><th>Situação</th><th>Nome</th><th>Curso</th><th>Sala</th><th>Box</th><th>Turma</th><th>Integrantes</th><th>Orientadores</th><th>Arquivo</th><th colspan='4'>Ações</th>
         @foreach ($projeto as $d)
             <tr>
-           <!--  <td>{{$d->id}}</td> -->
+            <td>{{$d->status}}</td>
+            <!-- <td>{{$d->id}}</td> -->
             <td>{{$d->nome}}</td>
             <td>{{$d->curso["nome"]}}</td>
             <td>{{$d->sala}}</td>
@@ -23,7 +28,6 @@ Enviar projeto
             <td>{{$d->orientadores}}</td>
            <!--  <td>{{$d->email}}</td> -->
             <td><a class="btn btn-outline-primary" href="/storage/{{$d->arquivo}}">Download</a></td>
-            <!-- <td>{{$d->data_hora}}</td> -->
            <!--  <td>{{$d->created_at}}</td>
             <td>{{$d->updated_at}}</td> -->
       <!--   <td>

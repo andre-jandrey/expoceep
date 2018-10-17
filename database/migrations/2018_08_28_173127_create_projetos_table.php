@@ -24,6 +24,7 @@ class CreateProjetosTable extends Migration
             $table->string('integrantes');
             $table->string('orientadores');
             $table->string('email');
+            $table->string('status'); //pendente, aprovado, negado
             $table->string('arquivo');
             $table->timestamp('data_hora');
             $table->timestamps();

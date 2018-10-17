@@ -16,7 +16,8 @@ class Projeto extends Model
         'integrantes',
         'orientadores',
         'email',
-        'arquivo'];
+        'arquivo',
+        'status'];
 
     public static function rules()
     {
@@ -48,7 +49,7 @@ class Projeto extends Model
 
     public function curso()
     {
-        return $this->belongsTo(Curso::class);
+        return $this->belongsTo('App\Curso', 'curso_id');
     }
 
     public function user()

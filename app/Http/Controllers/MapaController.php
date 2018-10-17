@@ -40,6 +40,8 @@ class MapaController extends Controller
 
     public function showBlocoCurso($projeto_id)
     {
+        session(['projeto_id' => $projeto_id]);
+
         $projeto = Projeto::find($projeto_id);
 
         switch ($projeto->curso_id) {
