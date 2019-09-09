@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registre-se') }}</div>
+                {{--<div class="card-header">{{ __('Registre-se') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
@@ -62,12 +62,12 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/RegulamentoEXPOCEEP2018.pdf'>Regulamento da ExpoCEEP 2018</a><br>
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/autorizacao_de_imagem.doc'>Termo de autorização de uso de imagem</a><br>
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_pesquisa_escolar.doc'>Modelo de projeto de pesquisa escolar</a><br>
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_projeto_iniciacao_cientifica.doc'>Modelo de projeto de iniciação científica</a><br>
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
-                                <a href='http://www.ceepcascavel.com.br/plugins/tinymce/source/WEB/Modelo_banner_novo.ppt'>Modelo de banner</a><br>
+                                <a href='docs/RegulamentoEXPOCEEP2019.pdf'>Regulamento da ExpoCEEP 2018</a><br>
+                                <!--<a href='docs/autorizacao_de_imagem.doc'>Termo de autorização de uso de imagem</a><br>-->
+                                <a href='docs/Modelo_projeto_pesquisa_escolar.doc'>Modelo de projeto de pesquisa escolar</a><br>
+                                <a href='docs/Modelo_projeto_iniciacao_cientifica.doc'>Modelo de projeto de iniciação científica</a><br>
+                                <a href='docs/Orientacoes_inicicao_cientifica.doc'>Orientaçãoes para projetos de iniciação científica</a><br>
+                                <a href='docs/Modelo_banner_novo.ppt'>Modelo de banner</a><br>
 
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

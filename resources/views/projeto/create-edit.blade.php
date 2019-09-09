@@ -37,6 +37,35 @@
                                 <input name='nome' value='{{$projeto->nome or old('nome')}}' class='form-control'/>
                             </div>
                             <div class='form-group'>
+                                <label>Nome do projeto</label>
+                                <select name="area" class="form-control" required>
+                                <option value="">Área do conhecimento</option>
+                            @php
+                            
+                            $areas = array(
+                                '1' => 'Ciências Agrárias',
+                                '2' => 'Ciências Biológicas',
+                                '3' => 'Ciências da Saúde',
+                                '4' => 'Ciências Exatas e da Terra',
+                                '5' => 'Ciências Humanas',
+                                '6' => 'Ciências Sociais',
+                                '7' => 'Engenharias e suas Aplicações'
+                            );
+                            @endphp
+                            @foreach ($areas as $key => $value) 
+
+                                <option value="{{$key}}" {{ (old("area") == $key ? "selected":"") }}
+
+                                    @if(isset($projeto) && ($key == $projeto->area))
+                                        selected
+                                    @endif
+    
+                                    >{{$value}}
+                            @endforeach
+                            
+                            </select>
+                        </div>
+                        <div class='form-group'>
                             <label>Selecione o curso</label>
                             <select name="curso_id" class='form-control'>
                             <option value="">Escolha</option>
@@ -99,6 +128,27 @@
                                     @endif
                                     value="4° Ano B">4° Ano B</option>
 
+                                    <option {{ (old("turma") == "1° Ano C" ? "selected":"") }}
+                                    @if(isset($projeto) && ("1° Ano C" == $projeto->turma))
+                                        selected
+                                    @endif
+                                    value="1° Ano B">1° Ano C</option>
+                                    <option {{ (old("turma") == "2° Ano C" ? "selected":"") }}
+                                    @if(isset($projeto) && ("2° Ano C" == $projeto->turma))
+                                        selected
+                                    @endif
+                                    value="2° Ano B">2° Ano C</option>
+                                    <option {{ (old("turma") == "3° Ano C" ? "selected":"") }}
+                                    @if(isset($projeto) && ("3° Ano C" == $projeto->turma))
+                                        selected
+                                    @endif
+                                    value="3° Ano B">3° Ano C</option>
+                                    <option {{ (old("turma") == "4° Ano C" ? "selected":"") }}
+                                    @if(isset($projeto) && ("4° Ano C" == $projeto->turma))
+                                        selected
+                                    @endif
+                                    value="4° Ano B">4° Ano C</option>
+
                                     <option {{ (old("turma") == "1° Semestre" ? "selected":"") }}
                                     @if(isset($projeto) && ("1° Semestre" == $projeto->turma))
                                         selected
@@ -122,9 +172,9 @@
                                 </select>
                                 <!-- <input value='{{$projeto->turma or old('turma')}}' class='form-control'/> -->
                             </div>
-                            <div class='form-group'>
+                            <!--<div class='form-group'>
                                 <label>Integrantes</label>
-                                <textarea name='integrantes' class='form-control'>{{$projeto->integrantes or old('integrantes')}}</textarea>                             </div>
+                                <textarea name='integrantes' class='form-control'>{{$projeto->integrantes or old('integrantes')}}</textarea></div> -->                            
                             <div class='form-group'>
                                 <label>Orientadores</label>
                                 <textarea name='orientadores' class='form-control'>{{$projeto->orientadores or old('orientadores')}}</textarea>

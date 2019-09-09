@@ -27,7 +27,6 @@ class ProjetoRequest extends FormRequest
             'nome' => 'required|min:3|max:255',
             'curso_id' => 'required',
             'turma' => 'required',
-            'integrantes' => 'required|min:3|max:255',
             'orientadores' => 'required|min:3|max:255',
             'email' => 'required|email|min:3|max:255',
             'arquivo' => "required|mimes:pdf|max:10000",

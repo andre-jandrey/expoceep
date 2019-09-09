@@ -10,12 +10,12 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
-
+                        <div class="alert alert-info"> Utilize o mesmo usuário e senha do site do CEEP</div>
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Usuário') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -63,9 +63,9 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Esqueceu a senha?') }}
                                 </a>
-                                <a class="btn btn-link" href="{{ route('register') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('register') }}">
                                     {{ __('Registre-se') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

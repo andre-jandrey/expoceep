@@ -7,6 +7,7 @@ use App\Http\Requests\ProjetoRequest;
 /* use Illuminate\Http\File;*/
 use App\Projeto;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProjetoController extends Controller
 {
@@ -34,12 +35,12 @@ class ProjetoController extends Controller
         ]);
 
         $path = $request->arquivo->store('arquivos');
-        //$url = Storage::url($path);
+        $url = Storage::url($path);
         $dados = $request->all();
 
         $projeto = projeto::find($id);
         $dados["usuario_id"] = Auth::user()->id;
-        $dados["arquivo"] = $path;
+        $dados["arquivo"] = $url;
         $projeto->update($dados);
 
         return redirect()->action('ProjetoController@index')->withInput($request->only('nome'));
@@ -81,11 +82,11 @@ class ProjetoController extends Controller
         ]);
 
         $path = $request->arquivo->store('arquivos');
-        //$url = Storage::url($path);
+        $url = Storage::url($path);
         $dados = $request->all();
 
         $dados["usuario_id"] = Auth::user()->id;
-        $dados["arquivo"] = $path;
+        $dados["arquivo"] = $url;
 
         $projeto = projeto::create($dados);
 

@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth', 'encerrado'])->group(function () {
     Route::get('/', 'ProjetoController@index')->name('inicio');

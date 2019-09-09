@@ -17,6 +17,10 @@ class encerrado
     public function handle($request, Closure $next)
     {
         $user_id = Auth::id();
+        
+        
+        return $next($request);
+
 
         if ($user_id == 1) {
             return $next($request);
